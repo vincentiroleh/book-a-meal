@@ -1,4 +1,4 @@
-.signup-page {
+.signup-page, .login-page{
     background:url(../../img/cook-366875_1280.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -69,7 +69,7 @@
     text-decoration: underline;
 }
 
-.signup-form button{
+.signup-form button, .login-form button{
     background-color: #337500;
     border: 1px solid #fff;
     color: #fff;
@@ -84,7 +84,7 @@
     white-space: nowrap;
     margin-bottom: 7px;
 }
-.signup-form button:hover{
+.signup-form button:hover, .login-form button:hover{
     background-color: #fff;
     border: 1px solid #337500;
     color: #337500;
