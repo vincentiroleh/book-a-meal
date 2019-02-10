@@ -1,0 +1,17 @@
+.user_comfirm_page {
+	background: #f5f8fa;
+}
+
+.user_comfirm_page div {
+	border: #fff solid 5px;
+	margin: 20px;
+	background: #DBF7A0;
+}
+
+.user_comfirm_page hr {
+	margin: 0 50px;
+}
+
+.user_comfirm_page footer {
+	margin: 20px;
+}
