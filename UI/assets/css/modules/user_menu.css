@@ -1,0 +1,237 @@
+.user_menu-page {
+    background: #f5f8fa;
+    margin: 0;
+}
+
+/* Header section of the user_menu.html ==================================*/
+.user_menu-page .header_section {
+    width: 100%;
+    background: #3e771e;
+    margin-top: -20px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    z-index: 9999;
+    border-bottom: 2px solid #ffffff;
+}
+
+.user_menu-page .header {
+    margin: 0 20px;
+}
+
+/* Brand ===================================================================*/
+.user_menu-page .header .brand {
+    float: left;
+    margin-top: 18px;
+}
+
+.user_menu-page .logo {
+    max-width: 125px;
+}
+
+.user_menu-page .header .brand a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: sofia;
+}
+
+/* Navigation ===========================================================*/
+.user_menu-page .header .navigation {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.user_menu-page .header .navigation li {
+    float: right;
+    padding: 14px 7px;
+}
+
+.user_menu-page .header .navigation li .logout {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: 42px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.user_menu-page .header .navigation li .logout:hover {
+    color: #ffaf30;
+    border: #ffaf30 dotted 2px;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+
+
+.user_menu-page h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #337500;
+    line-height: 0.1em;
+    margin: 100px 0 20px 10px;
+    font-size: 18px;
+}
+
+.user_menu-page h2 span {
+    background: #f5f8fa;
+    padding: 0 10px;
+
+}
+
+.user_menu-page .user_menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    align-items: stretch;
+    margin: 10px;
+    margin-top: 50px;
+
+}
+
+.user_menu-page .user_menu-container section {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-height: 93%;
+    filter: grayscale(100%);
+}
+
+.user_menu-page .user_menu-container section:hover {
+    filter: grayscale(0%);
+}
+
+.user_menu-container>section img {
+    max-width: 80%;
+    margin-top: 50px;
+    border-radius: 50%;
+    transition: transform .2s;
+}
+
+.user_menu-page .user_menu-container>section img:hover {
+    transform: scale(1.2)
+}
+
+.user_menu-page .user_menu-container .text {
+    padding: 0 20px 20px;
+}
+
+.user_menu-page .user_menu-container .text>button {
+    background: gray;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.user_menu-page .user_menu-container .text>button:hover {
+    background-color: #337500;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.user_menu-page footer {
+    background: #f5f8fa;
+    padding: 15px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-weight: lighter;
+    color: gray;
+    font-size: 15px;
+}
+
+.user_menu-page .footer-hr {
+    margin: 0 40px;
+    border-top: #337500 solid 1px;
+}
+
+
+/* modal section*/
+
+.user_menu-page .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.user_menu-page .modal-content {
+    background-color: #fefefe;
+    margin: 30% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+}
+
+
+/* Modal Body */
+.user_menu-page .modal-body {
+    padding: 2px 16px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+/* Modal Content */
+.user_menu-page .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding-top: 100px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/*modal form section*/
+.user_menu-page input[type=text],
+input[type=number],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 2px;
+    text-transform: uppercase;
+}
+
+.user_menu-page input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.user_menu-page input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.user_menu-page .invoice_section {
+    width: 100%;
+}
+
+.user_menu-page .invoice_section div p {
+    text-align: start;
+    margin: 5px;
+
+}
