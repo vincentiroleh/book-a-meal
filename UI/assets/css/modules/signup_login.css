@@ -1,11 +1,14 @@
-.signup-page, .login-page{
-    background:url(../../img/cook-366875_1280.jpg) no-repeat center center fixed;
+.signup-page,
+.login-page {
+    background: url(../../img/cook-366875_1280.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;    
+    background-size: cover;
 }
-.signup-canvas,.login-canvas{
+
+.signup-canvas,
+.login-canvas {
     background: #ffffff;
     opacity: 0.9;
     display: grid;
@@ -13,25 +16,31 @@
     grid-template-rows: auto;
     margin: 5% 19%;
 }
-.signup-container,.login-container{
+
+.signup-container,
+.login-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     margin: 0 12%;
 }
-.signup-container h1,.login-container h1 {
+
+.signup-container h1,
+.login-container h1 {
     padding: 40px 0 20px 0;
     font-size: 23px;
     line-height: .8;
     margin: 0;
 }
 
-.signup-container span{
+.signup-container span {
     font-weight: lighter;
     font-size: 15px;
     color: #657786;
 }
-.signup-form input,.login-form input {
+
+.signup-form input,
+.login-form input {
     display: block;
     padding: 4px;
     outline: 0;
@@ -44,32 +53,43 @@
     font-size: 14px;
     line-height: 20px;
 }
-.login-form input{
+
+.login-form input {
     margin-top: 20px;
 }
 
-.signup-form input:focus-within,.login-form input:focus-within{
+.signup-form input:focus-within,
+.login-form input:focus-within {
     border: 1px solid #53b0ee;
 }
-.signup-bottomContent,.login-bottomContent{
+
+.signup-bottomContent,
+.login-bottomContent {
     background: #f5f8fa;
 }
-.signup-bottomContent p,.login-bottomContent p{
+
+.signup-bottomContent p,
+.login-bottomContent p {
     font-size: 14px;
     line-height: 20px;
     text-align: start;
     margin: 2% 12%;
     color: #657786;
 }
-.signup-bottomContent a,.login-bottomContent a{
+
+.signup-bottomContent a,
+.login-bottomContent a {
     text-decoration: none;
     color: #4888E8;
 }
-.signup-bottomContent a:hover,.login-bottomContent a:hover{
+
+.signup-bottomContent a:hover,
+.login-bottomContent a:hover {
     text-decoration: underline;
 }
 
-.signup-form button, .login-form button{
+.signup-form button,
+.login-form button {
     background-color: #337500;
     border: 1px solid #fff;
     color: #fff;
@@ -84,7 +104,9 @@
     white-space: nowrap;
     margin-bottom: 7px;
 }
-.signup-form button:hover, .login-form button:hover{
+
+.signup-form button:hover,
+.login-form button:hover {
     background-color: #fff;
     border: 1px solid #337500;
     color: #337500;
