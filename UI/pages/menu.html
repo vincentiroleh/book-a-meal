@@ -11,7 +11,7 @@
         rel="icon" type="image/x-icon" />
 </head>
 
-<body class="admin-meals-page">
+<body class="admin-menu-page">
     <div class="grid">
         <!-- admin sidebar section -->
         <div class="admin-sidebar">
@@ -24,8 +24,8 @@
 
             <div class="nav-canvas">
                 <a href="./dashboard.html">Dashboard</a>
-                <a href="#" class="active">Meals</a>
-                <a href="./menu.html">Menu</a>
+                <a href="./meals.html">Meals</a>
+                <a href="#" class="active">Menu</a>
                 <a href="#">Order History</a>
             </div>
         </div>
@@ -40,9 +40,10 @@
 
             <div class="meal-canvas">
                 <button onclick="btnClick()" id="addMealBtn" title="Click to add a meal">
-                    Add a Meal
+                    Setup Menu
                 </button>
             </div>
+                <h4>Meal on today's menu</h4>
 
             <div class="meals-container">
                 <section>
@@ -51,7 +52,7 @@
                         <h3>Jollof Rice, Chicken and Salad</h3>
                         <p>&#8358; 2,500</p>
                     </div>
-                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                    
                 </section>
 
                 <section>
@@ -60,7 +61,7 @@
                         <h3>Jollof Rice, Chicken and Salad</h3>
                         <p>&#8358; 3000</p>
                     </div>
-                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                    
                 </section>
 
                 <section>
@@ -69,7 +70,7 @@
                         <h3>Jollof Rice, Chicken and Salad</h3>
                         <p>&#8358; 4000</p>
                     </div>
-                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                    
                 </section>
 
                 <section>
@@ -78,7 +79,7 @@
                         <h3>Jollof Rice, Chicken and Salad</h3>
                         <p>&#8358; 5000</p>
                     </div>
-                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                    
                 </section>
 
                 <section>
@@ -87,7 +88,7 @@
                         <h3>Jollof Rice, Chicken and Salad</h3>
                         <p>&#8358; 5000</p>
                     </div>
-                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                    
                 </section>
 
                 <section>
@@ -96,7 +97,7 @@
                         <h3>Jollof Rice, Chicken and Salad</h3>
                         <p>&#8358; 5000</p>
                     </div>
-                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                    
                 </section>
 
             </div>
@@ -107,21 +108,32 @@
     <section id="myModal" class="modal">
         <div class="modal-content">
             <div class="modal-body">
-                <h3>Add a Meal</h3>
-                <form action="./meals.html">
-                    <label for="name">Name of meal:</label>
-                    <input type="text" name="meal" placeholder="Name of meal" required>
+                <h3>Select Meal Options</h3>
+                <form action="./menu.html">
+                    <label for="date">Select Date:</label>
+                    <input id="date" type="date" value="2019-02-11">
+                    <h4>List of meals ready</h4>
+                    <label for="name">Humbugger:</label>
+                    <input type="checkbox" value="Humbugger">
 
-                    <label for="image">Image of Meal:</label>
-                    <input type="file" name="image" id="image" required>
+                    <label for="name">Pizza:</label>
+                    <input type="checkbox" value="Pizza">
 
-                    <label for="price">Price:</label>
-                    <input type="text" name="price" placeholder="Price of meal" required>
+                    <label for="name">Donut:</label>
+                    <input type="checkbox" value="Donut">
+                    
+                    <label for="name">Rice and Beans:</label>
+                    <input type="checkbox" value="Rice and Beans">
 
-                    <label for="description">Description of meal:</label>
-                    <input type="textarea" >
+                    <label for="name">Plantain and Beans:</label>
+                    <input type="checkbox" value="Plantain and Beans">
 
-                    <input type="submit" value="Add Meal">
+                    <label for="name">Okoru soup and Goat meat:</label>
+                    <input type="checkbox" value="Okoru soup and Goat meat">
+
+                    <label for="name">Egusi soup with chicken:</label>
+                    <input type="checkbox" value="Egusi soup with chicken">
+                    <input type="submit" value="Add Menu">
                 </form>
             </div>
         </div>
