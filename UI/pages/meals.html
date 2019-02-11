@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book a Meal - Caterer Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJqXkwKbmZQYm5iTSJqXknGioJuGqqikiqekoH6amJRgmJaSNJiWkg2Uko8AAAAAAAAAAAAAAAAAgH14AJ2alSGmo56d8O7p6v////3///////////////////////////////r////c7Ovoh5iXlByMiogAAAAAAJ2alB/MycPZ//////////+l6e3/RaOs/0e4xP9Br7r/MpKm/0O8zf9Pw9D/dtvm/93////////j////Q4uKiACinphn/////+r///9HtL7/QKmy/yyCtP8JQPT/AA3//wAA//8AIu3/ABXi/y2Ix/9FuMb/juPt/////+3///8ds6+oRf////y9////QKew/yJtxf8AAP//AAD//wAA//8AAP//AADt/wAC//8AAP//JHe0/07L2//8////////b56akgT///+Y/////0Wttf8AJtf/AAD//wAA//8AJLX/ADmM/wJJlf8AHN//AAD//xlhsv9zwMr//////v///0EAAAAA5eDYAv///2v////nZKXP/wg37v8AAPn/AAD//yIhRf8UXJ3/GHak/x1Wv/+s7/f/////8P///2QAAAAAAAAAAAAAAAAAAAAA////CP///0////+T////wsbt695vclT3Nqm8/zWWqPz///+n////ZP///xEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE2h3RiqftOtqr6f7nH9KPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgoH19Oandy4c6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHrxX119M2DcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/0oJO9nmQ6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAByXTYJ/+WXsF9NKwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/hlT3vy4aIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+ebmnhkPigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL2gaRfOr3WWwAcAAAABAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOADAAD/DwAA/4cAAP/HAAD/4wAA//EAAP/5AAD//AAA//wAAA=="
+        rel="icon" type="image/x-icon" />
+</head>
+
+<body class="admin-meals-page">
+    <div class="grid">
+        <!-- admin sidebar section -->
+        <div class="admin-sidebar">
+            <div class="admin-canvas">
+                <h1>BOOK A MEAL</h1>
+                <img class="admin-avatar" src="../assets/img/admin-avatar.svg" alt="admin avatar" title="Irole Vincent">
+                <a href="#" title="Profile Settings"><img class="setting" src="../assets/img/setting.png" alt="setting"></a>
+                <a href="./admin_login.html" title="Logout"><img class="poweroff" src="../assets/img/power.svg" alt="logout"></a>
+            </div>
+
+            <div class="nav-canvas">
+                <a href="./dashboard.html">Dashboard</a>
+                <a href="#" class="active">Meals</a>
+                <a href="#">Menu</a>
+                <a href="#">Order History</a>
+            </div>
+        </div>
+
+        <!-- dashboard container section -->
+        <div class="dashboard-container">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <img title="Messages" src="../assets/img/msgIcon.svg" class="msgIcon" alt="Message Icon">
+                <img title="Notifications" class="notificationIcon" src="../assets/img/notificationIcon.svg" alt="notifications">
+            </div>
+
+            <div class="meal-canvas">
+                <button onclick="btnClick()" id="addMealBtn" title="Click to add a meal">
+                    Add a Meal
+                </button>
+            </div>
+
+            <div class="meals-container">
+                <section>
+                    <img src="../assets/img/foods/6dish.jpg" alt="dish photo">
+                    <div class="text">
+                        <h3>Jollof Rice, Chicken and Salad</h3>
+                        <p>&#8358; 2,500</p>
+                    </div>
+                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                </section>
+
+                <section>
+                    <img src="../assets/img/foods/10dish.jpg" alt="dish photo">
+                    <div class="text">
+                        <h3>Jollof Rice, Chicken and Salad</h3>
+                        <p>&#8358; 3000</p>
+                    </div>
+                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                </section>
+
+                <section>
+                    <img src="../assets/img/foods/29dish.jpg" alt="dish photo">
+                    <div class="text">
+                        <h3>Jollof Rice, Chicken and Salad</h3>
+                        <p>&#8358; 4000</p>
+                    </div>
+                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                </section>
+
+                <section>
+                    <img src="../assets/img/foods/19dish.jpg" alt="dish photo">
+                    <div class="text">
+                        <h3>Jollof Rice, Chicken and Salad</h3>
+                        <p>&#8358; 5000</p>
+                    </div>
+                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                </section>
+
+                <section>
+                    <img src="../assets/img/foods/25dish.jpg" alt="dish photo">
+                    <div class="text">
+                        <h3>Jollof Rice, Chicken and Salad</h3>
+                        <p>&#8358; 5000</p>
+                    </div>
+                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                </section>
+
+                <section>
+                    <img src="../assets/img/foods/16dish.jpg" alt="dish photo">
+                    <div class="text">
+                        <h3>Jollof Rice, Chicken and Salad</h3>
+                        <p>&#8358; 5000</p>
+                    </div>
+                    <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <section id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3>Add a Meal</h3>
+                <form action="./meals.html">
+                    <label for="name">Name of meal:</label>
+                    <input type="text" name="meal" placeholder="Name of meal" required>
+
+                    <label for="image">Image of Meal:</label>
+                    <input type="file" name="image" id="image" required>
+
+                    <label for="price">Price:</label>
+                    <input type="text" name="price" placeholder="Price of meal" required>
+
+                    <label for="description">Description of meal:</label>
+                    <input type="textarea" >
+
+                    <input type="submit" value="Add Meal">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
