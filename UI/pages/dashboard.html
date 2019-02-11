@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book a Meal - Caterer Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJqXkwKbmZQYm5iTSJqXknGioJuGqqikiqekoH6amJRgmJaSNJiWkg2Uko8AAAAAAAAAAAAAAAAAgH14AJ2alSGmo56d8O7p6v////3///////////////////////////////r////c7Ovoh5iXlByMiogAAAAAAJ2alB/MycPZ//////////+l6e3/RaOs/0e4xP9Br7r/MpKm/0O8zf9Pw9D/dtvm/93////////j////Q4uKiACinphn/////+r///9HtL7/QKmy/yyCtP8JQPT/AA3//wAA//8AIu3/ABXi/y2Ix/9FuMb/juPt/////+3///8ds6+oRf////y9////QKew/yJtxf8AAP//AAD//wAA//8AAP//AADt/wAC//8AAP//JHe0/07L2//8////////b56akgT///+Y/////0Wttf8AJtf/AAD//wAA//8AJLX/ADmM/wJJlf8AHN//AAD//xlhsv9zwMr//////v///0EAAAAA5eDYAv///2v////nZKXP/wg37v8AAPn/AAD//yIhRf8UXJ3/GHak/x1Wv/+s7/f/////8P///2QAAAAAAAAAAAAAAAAAAAAA////CP///0////+T////wsbt695vclT3Nqm8/zWWqPz///+n////ZP///xEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE2h3RiqftOtqr6f7nH9KPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgoH19Oandy4c6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHrxX119M2DcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/0oJO9nmQ6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAByXTYJ/+WXsF9NKwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/hlT3vy4aIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+ebmnhkPigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL2gaRfOr3WWwAcAAAABAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOADAAD/DwAA/4cAAP/HAAD/4wAA//EAAP/5AAD//AAA//wAAA=="
+        rel="icon" type="image/x-icon" />
+</head>
+
+<body class="admin-dashboard-page">
+    <div class="grid">
+        <!-- admin sidebar section -->
+        <div class="admin-sidebar">
+            <div class="admin-canvas">
+                <h1>BOOK A MEAL</h1>
+                <img class="admin-avatar" src="../assets/img/admin-avatar.svg" alt="admin avatar" title="Irole Vincent">
+                <a href="#" title="Profile Settings"><img class="setting" src="../assets/img/setting.png" alt="setting"></a>
+                <a href="./admin_login.html" title="Logout"><img class="poweroff" src="../assets/img/power.svg" alt="logout"></a>
+            </div>
+
+            <div class="nav-canvas">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Meals</a>
+                <a href="#">Menu</a>
+                <a href="#">Order History</a>
+            </div>
+        </div>
+
+        <!-- dashboard container section -->
+        <div class="dashboard-container">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <img title="Messages" src="../assets/img/msgIcon.svg" class="msgIcon" alt="Message Icon">
+                <img title="Notifications" class="notificationIcon" src="../assets/img/notificationIcon.svg" alt="notifications">
+            </div>
+
+            <div class="statNums">
+                <div>
+                    <h1>Today's Orders</h1>
+                    <span>1000</span>
+                </div>
+                <div>
+                    <h1>Pending Orders</h1>
+                    <span>500</span>
+                </div>
+                <div>
+                    <h1>Today's Revenue</h1>
+                    <span>&#8358;1 . 5M</span>
+                </div>
+            </div>
+
+            <div class="report-container">
+                <h3>Latest Reports</h3>
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Meals</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Dish One</td>
+                        <td>Trust O.</td>
+                        <td>01/01/2019</td>
+                        <td>&#8358;2000</td>
+                        <td>
+                            <select name="status" id="status">
+                                <option class="delivered">Delivered</option>
+                                <option class="pending">Pending</option>
+                                <option class="canceled">Canceled</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Dish Two</td>
+                        <td>Uche</td>
+                        <td>01/02/2019</td>
+                        <td>&#8358;2000</td>
+                        <td>
+                            <select name="status" id="status">
+                                <option class="delivered">Delivered</option>
+                                <option class="pending">Pending</option>
+                                <option class="canceled">Canceled</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Dish three</td>
+                        <td>Prisca</td>
+                        <td>11/01/2019</td>
+                        <td>&#8358;3000</td>
+                        <td>
+                            <select name="status" id="status">
+                                <option class="delivered">Delivered</option>
+                                <option class="pending">Pending</option>
+                                <option class="canceled">Canceled</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Dish Four</td>
+                        <td>Anita</td>
+                        <td>/09/01/2019</td>
+                        <td>&#8358;1500</td>
+                        <td>
+                            <select name="status" id="status">
+                                <option class="delivered">Delivered</option>
+                                <option class="pending">Pending</option>
+                                <option class="canceled">Canceled</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
