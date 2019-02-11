@@ -1,0 +1,243 @@
+.admin-menu-page .meals-page {
+    background: #F4F7FA;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.admin-menu-page .grid {
+    display: grid;
+    grid-template-columns: [admin-sidebar] 250px [dashboard-container] 1fr;
+    height: 100vh;
+    grid-gap: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.admin-menu-page .admin-sidebar {
+    grid-column: admin-sidebar / dashboard-container;
+    background: #F4F7FA;
+}
+
+.admin-menu-page .admin-sidebar .admin-canvas {
+    display: inline-block;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 10px;
+}
+
+.admin-menu-page .admin-sidebar .admin-canvas a img {
+    max-width: 30px;
+}
+
+.admin-menu-page .nav-canvas a {
+    text-decoration: none;
+    display: block;
+    text-align: start;
+    margin: 30px 0 0;
+    padding: 5px;
+    color: #050d18;
+    font-size: 18px;
+    width: 100%;
+}
+
+.admin-menu-page .nav-canvas .active {
+    background: #EAEEF2;
+    color: #008300;
+    border-left: #008300 solid 2px;
+    font-weight: bolder;
+}
+
+.admin-menu-page .nav-canvas a:hover {
+    background: #EAEEF2;
+    color: #008300;
+    font-weight: bolder;
+}
+
+.admin-menu-page .dashboard-container {
+    grid-column: dashboard-container / dashboard-container;
+    grid-row: 1;
+    max-height: 100vh;
+    overflow-y: auto;
+    background: #212F23;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.admin-menu-page .dashboard-container .header * {
+    display: inline-block;
+}
+
+
+.admin-menu-page .dashboard-container .header h1 {
+    float: left;
+    padding: 6px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.notificationIcon,
+.msgIcon {
+    max-width: 34px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.admin-menu-page .dashboard-container>h4 {
+    text-align: center;
+    color: #EAEEF2;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.admin-menu-page .meal-canvas {
+    text-align: start;
+}
+
+.admin-menu-page .meal-canvas button {
+    border-radius: 30px;
+    font-weight: bolder;
+    outline: none;
+    margin: 10px;
+    padding: 10px;
+    background: #008300;
+    color: #EAEEF2;
+}
+
+.admin-menu-page .meal-canvas button:hover {
+    color: #008300;
+    background: transparent;
+}
+
+.admin-menu-page .meals-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    align-items: stretch;
+    margin: 10px;
+    margin-top: 50px;
+
+}
+
+.admin-menu-page .meals-container section {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background: #EAEEF2;
+    height: 55vh;
+}
+
+
+.admin-menu-page .meals-container>section img {
+    max-width: 50%;
+    margin-top: 40px;
+    border-radius: 50%;
+    transition: transform .2s;
+}
+
+.admin-menu-page .meals-container>section img:hover {
+    transform: scale(1.2)
+}
+
+.admin-menu-page .meals-container .text {
+    padding: 0 20px 20px;
+}
+
+.admin-menu-page .meals-container button {
+    width: 35%;
+    border: none;
+}
+
+.admin-menu-page .meals-container .editBtn {
+    background: #008300;
+    color: #F4F7FA;
+}
+
+.admin-menu-page .meals-container .deleteBtn {
+    background: red;
+    color: #F4F7FA;
+}
+
+
+/* modal section*/
+
+.admin-menu-page .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.admin-menu-page .modal-body h3 {
+    text-align: center;
+}
+
+.admin-menu-page .modal-content {
+    background-color: #fefefe;
+    margin: 30% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+}
+
+
+/* Modal Body */
+.admin-menu-page .modal-body {
+    padding: 2px 16px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+/* Modal Content */
+.admin-menu-page .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding-top: 100px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/*modal form section*/
+.admin-menu-page input[type=text],
+input[type=date],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 2px;
+    text-transform: uppercase;
+}
+
+.admin-menu-page input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.admin-menu-page input[type=submit]:hover {
+    background-color: #45a049;
+}
