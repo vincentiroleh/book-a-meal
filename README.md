@@ -2,7 +2,7 @@
 
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
-##### UI Template Demo: [UI Template]()
+##### UI Template Demo: [UI Template](https://vincentiroleh.github.io/book-a-meal/UI/)
 
 ##### Trello Board Stories
 
