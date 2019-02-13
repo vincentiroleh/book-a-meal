@@ -5,64 +5,6 @@
     height: 100vh;
 }
 
-/* Header section of the index.html ==================================*/
-.header_section {
-    width: 100%;
-    background: #3e771e;
-    margin-top: -20px;
-}
-
-.landing-page .header {
-    margin: 0 20px;
-}
-
-/* Brand ===================================================================*/
-.landing-page .header .brand {
-    float: left;
-    margin-top: 18px;
-}
-
-.logo {
-    max-width: 125px;
-}
-
-.landing-page .header .brand a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bolder;
-    font-size: 25px;
-    font-family: sofia;
-}
-
-/* Navigation ===========================================================*/
-.landing-page .header .navigation {
-    list-style-type: none;
-    overflow: hidden;
-}
-
-.landing-page .header .navigation li {
-    float: right;
-    padding: 14px 7px;
-}
-
-.landing-page .header .navigation li a {
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: normal;
-    line-height: 42px;
-    text-align: left;
-    font-size: 18px;
-    font-family: Sofia;
-}
-
-.landing-page .header .navigation li a:hover {
-    color: #ffaf30;
-    border: #ffaf30 dotted 2px;
-    padding: 5px;
-    font-weight: bolder;
-
-}
-
 /* Description section ==================================================*/
 .landing-page .description {
     background: url(../../img/cook-366875_1280.jpg) no-repeat center center fixed;
@@ -70,20 +12,21 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 50vh;
+    height: 100vh;
     text-align: center;
-    padding-bottom: 15%;
     color: #FFFFFF;
-    margin-top: -18px;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
 }
 
 .landing-page .description h1 {
     text-transform: uppercase;
     font-family: Muli;
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: normal;
     font-weight: bolder;
-    padding-top: 4em;
+    padding-top: 3em;
     color: #FFFFFF;
 }
 
@@ -91,42 +34,48 @@
     max-width: 605px;
     margin: 0 auto 20px;
     font-size: 20px;
-    font-family: 'DINPro Regular';
+    font-family: 'Sofia';
     font-weight: normal;
     line-height: 31px;
 }
 
 .landing-page .description .buttons_banner {
-    margin-top: 65px;
+    margin-top: 60px;
 }
 
 .landing-page .description .buttons_banner>a {
     margin: 0 8px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 17px;
     line-height: 30px;
-    padding: 12px 47px 6px 40px;
+    padding: 14px 50px;
+    border-radius: 30px;
+    text-align: center;
+
 
 }
 
-.landing-page .description .buttons_banner .order_nowBtn {
+.landing-page .description .buttons_banner .signupBtn {
     color: #000;
     background: #FFAF30;
     border: 1px solid #FFAF30;
+}
+
+.landing-page .description .buttons_banner .signupBtn:hover {
+    background: transparent;
+    color: #FFFFFF;
+    font-weight: bolder;
 
 }
 
-.landing-page .description .buttons_banner .learn_moreBtn {
+
+.landing-page .description .buttons_banner .loginBtn {
     color: #FFAF30;
     border: 1px solid #FFAF30;
 }
 
-.landing-page .footer {
-    background: #3e771e;
+.landing-page .description .buttons_banner .loginBtn:hover {
+    background: #ffaf30;
+    font-weight: bolder;
     color: #FFFFFF;
-    text-align: center;
-    padding: 1%;
-    margin-bottom: -100px;
-    border-top: #FFFFFF solid 5px;
-    border-top-style: groove;
 }
