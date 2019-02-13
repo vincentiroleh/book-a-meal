@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book a Meal - Caterer Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJqXkwKbmZQYm5iTSJqXknGioJuGqqikiqekoH6amJRgmJaSNJiWkg2Uko8AAAAAAAAAAAAAAAAAgH14AJ2alSGmo56d8O7p6v////3///////////////////////////////r////c7Ovoh5iXlByMiogAAAAAAJ2alB/MycPZ//////////+l6e3/RaOs/0e4xP9Br7r/MpKm/0O8zf9Pw9D/dtvm/93////////j////Q4uKiACinphn/////+r///9HtL7/QKmy/yyCtP8JQPT/AA3//wAA//8AIu3/ABXi/y2Ix/9FuMb/juPt/////+3///8ds6+oRf////y9////QKew/yJtxf8AAP//AAD//wAA//8AAP//AADt/wAC//8AAP//JHe0/07L2//8////////b56akgT///+Y/////0Wttf8AJtf/AAD//wAA//8AJLX/ADmM/wJJlf8AHN//AAD//xlhsv9zwMr//////v///0EAAAAA5eDYAv///2v////nZKXP/wg37v8AAPn/AAD//yIhRf8UXJ3/GHak/x1Wv/+s7/f/////8P///2QAAAAAAAAAAAAAAAAAAAAA////CP///0////+T////wsbt695vclT3Nqm8/zWWqPz///+n////ZP///xEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE2h3RiqftOtqr6f7nH9KPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgoH19Oandy4c6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHrxX119M2DcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/0oJO9nmQ6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAByXTYJ/+WXsF9NKwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/hlT3vy4aIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+ebmnhkPigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL2gaRfOr3WWwAcAAAABAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOADAAD/DwAA/4cAAP/HAAD/4wAA//EAAP/5AAD//AAA//wAAA=="
+        rel="icon" type="image/x-icon" />
+</head>
+
+<body class="admin-history-page">
+    <div class="grid">
+        <!-- admin sidebar section -->
+        <div class="admin-sidebar">
+            <div class="admin-canvas">
+                <h1>BOOK A MEAL</h1>
+                <img class="admin-avatar" src="../assets/img/admin-avatar.svg" alt="admin avatar" title="Irole Vincent">
+                <a href="#" title="Profile Settings"><img class="setting" src="../assets/img/setting.png" alt="setting"></a>
+                <a href="./admin_login.html" title="Logout"><img class="poweroff" src="../assets/img/power.svg" alt="logout"></a>
+            </div>
+
+            <div class="nav-canvas">
+                <a href="./dashboard.html">Dashboard</a>
+                <a href="./meals.html">Meals</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./history.html" class="active">Order History</a>
+            </div>
+        </div>
+
+        <!-- dashboard container section -->
+        <div class="dashboard-container">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <img title="Messages" src="../assets/img/msgIcon.svg" class="msgIcon" alt="Message Icon">
+                <img title="Notifications" class="notificationIcon" src="../assets/img/notificationIcon.svg" alt="notifications">
+            </div>
+
+            <h4>Order Activity</h4>
+
+            <div class="activity-container">
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #1234567 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Trust O.</p>
+                        <p>Status: <em class="delivered">Delivered</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #09836748 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Uche Okoro</p>
+                        <p>Status: <em class="canceled">Canceled</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #9876514 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Anita Finebone</p>
+                        <p>Status: <em class="pending">Pending</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #1234567 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Paradise</p>
+                        <p>Status: <em class="delivered">Delivered</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #09836748 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Champion</p>
+                        <p>Status: <em class="canceled">Canceled</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #9876514 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Shulamite</p>
+                        <p>Status: <em class="pending">Pending</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #1234567 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Juan Mata</p>
+                        <p>Status: <em class="delivered">Delivered</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #09836748 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Zalatan</p>
+                        <p>Status: <em class="canceled">Canceled</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #9876514 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Anthony</p>
+                        <p>Status: <em class="pending">Pending</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #1234567 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Rashford</p>
+                        <p>Status: <em class="delivered">Delivered</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #09836748 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Carter</p>
+                        <p>Status: <em class="canceled">Canceled</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section onclick="btnClick()">
+                    <div class="text">
+                        <p><strong>Invoice: #9876514 <span class="align-right">13/12/17 12:38pm</span></strong></p>
+                        <hr>
+                        <p>Drake</p>
+                        <p>Status: <em class="pending">Pending</em> <span class="align-right">&#8358; 5000</span>
+                        </p>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <section id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3><strong>Order #123456789</strong></h3>
+                <hr>
+
+                <p>13/02/2019 <span class="align-right">02:50PM</span></p>
+                <p>Iroleh Vincent <span class="align-right">Status: <em class="delivered">Delivered</em></span></p>
+                <p>Address: <span class="align-right">5 Shonel Village Ikorodu</span></p>
+                <p>Phone Number: <span class="align-right">+2348165152414</span></p>
+                <hr>
+
+                <p>(2x)Jollof Rice <span class="align-right">&#8358;5000</span></p>
+                <p>(3x)Pizza <span class="align-right">&#8358;6000</span></p>
+                <hr>
+
+                <p>Subtotal <span class="align-right">&#8358;9000</span></p>
+                <p>Subtotal <span class="align-right">&#8358;700</span></p>
+                <hr>
+                <p>Total<span class="align-right">&#8358;9700</span></p>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
