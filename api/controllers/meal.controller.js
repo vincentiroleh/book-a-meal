@@ -1,0 +1,156 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
+/* eslint-disable class-methods-use-this */
+import Meals from '../utils/mealDb';
+// import mealModel from '../models/meal.model';
+
+
+class MealController {
+  // Get all meals
+  getAllMeals(req, res) {
+    return res.status(200).send({
+      status: 'true',
+      message: 'meals retrieved successfully',
+      data: Meals,
+    });
+  }
+
+  // Get a single meal
+  getMeal(req, res) {
+    const id = parseInt(req.params.id, 10);
+
+    Meals.map((meal) => {
+      const foundMeal = meal;
+      if (meal.id === id) {
+        return res.status(200).send({
+          status: 'true',
+          message: 'meal retrieved successfully',
+          foundMeal,
+        });
+      }
+    });
+    return res.status(404).send({
+      status: 'false',
+      message: 'Meal does not exist',
+    });
+  }
+
+  // Post Meals
+  createMeal(req, res) {
+    if (!req.body.name) {
+      return res.status(400).send({
+        status: 'false',
+        message: 'name of food is required',
+      });
+    }
+    if (!req.body.size) {
+      return res.status(400).send({
+        success: 'false',
+        message: 'size of food is required',
+      });
+    }
+    if (!req.body.price) {
+      return res.status(400).send({
+        success: 'false',
+        message: 'price of food is required',
+      });
+    }
+    const newMeal = {
+      id: Meals.length + 1,
+      name: req.body.name,
+      size: req.body.size,
+      price: req.body.price,
+    };
+    Meals.push(newMeal);
+    return res.status(201).send({
+      status: 'true',
+      message: 'Meals added successfully',
+      newMeal,
+    });
+  }
+
+  // Updating a meal (put meal)
+  updateMeal(req, res) {
+    const id = parseInt(req.params.id, 10);
+
+    let foundMeal;
+    let itemIndex;
+
+    Meals.map((meal, index) => {
+      if (meal.id === id) {
+        foundMeal = meal;
+        itemIndex = index;
+      }
+    });
+
+    // handing errors
+    if (!foundMeal) {
+      return res.status(404).send({
+        status: 'false',
+        message: 'Meal not found',
+      });
+    }
+    if (!req.body.name) {
+      return res.status(400).send({
+        status: 'false',
+        message: 'name is required',
+      });
+    }
+    if (!req.body.size) {
+      return res.status(400).send({
+        status: 'false',
+        message: 'name is required',
+      });
+    }
+    if (!req.body.price) {
+      return res.status(400).send({
+        status: 'false',
+        message: 'price is required',
+      });
+    }
+
+    const updatedMeal = {
+      id: foundMeal.id,
+      name: req.body.name || foundMeal.name,
+      size: req.body.size || foundMeal.size,
+      price: req.body.price || foundMeal.price,
+    };
+    Meals.splice(itemIndex, 1, updatedMeal);
+
+    return res.status(201).send({
+      status: 'true',
+      message: 'Meal updated successfully',
+      updatedMeal,
+    });
+  }
+
+  // Deleting a meal
+  deleteMeal(req, res) {
+    const id = parseInt(req.params.id, 10);
+
+    let foundMeal;
+    let itemIndex;
+
+    Meals.map((meal, index) => {
+      if (meal.id === id) {
+        foundMeal = meal;
+        itemIndex = index;
+      }
+    });
+
+    if (!foundMeal) {
+      return res.status(404).send({
+        status: 'false',
+        message: 'Meal not found',
+      });
+    }
+    Meals.splice(itemIndex, 1);
+
+    return res.status(200).send({
+      status: 'true',
+      message: 'Meal deleted successfully',
+    });
+  }
+}
+
+export default MealController;
