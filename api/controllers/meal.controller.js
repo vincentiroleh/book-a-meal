@@ -5,7 +5,7 @@ import Meals from '../utils/mealDb';
 import mealModel from '../models/meal.model';
 
 class MealController {
-  // Get all meals
+  // Get all the meal options
   getAllMeals(req, res) {
     return res.status(200).send({
       status: 'true',
@@ -14,7 +14,7 @@ class MealController {
     });
   }
 
-  // Get a single meal
+  // Get a single meal option
   getMeal(req, res) {
     const id = parseInt(req.params.id, 10);
 
@@ -34,7 +34,7 @@ class MealController {
     });
   }
 
-  // Post Meals
+  // Add a meal option
   createMeal(req, res) {
     if (!req.body.name) {
       return res.status(400).send({
@@ -68,7 +68,7 @@ class MealController {
     });
   }
 
-  // Updating a meal (put meal)
+  // Update the information of a mealoption
   updateMeal(req, res) {
     const id = parseInt(req.params.id, 10);
 
@@ -123,7 +123,7 @@ class MealController {
     });
   }
 
-  // Deleting a meal
+  // Remove a meal option
   deleteMeal(req, res) {
     const id = parseInt(req.params.id, 10);
 
