@@ -2,11 +2,10 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable class-methods-use-this */
 import Meals from '../utils/mealDb';
-// import mealModel from '../models/meal.model';
-
+import mealModel from '../models/meal.model';
 
 class MealController {
-  // Get all meals
+  // Get all the meal options
   getAllMeals(req, res) {
     return res.status(200).send({
       status: 'true',
@@ -15,7 +14,7 @@ class MealController {
     });
   }
 
-  // Get a single meal
+  // Get a single meal option
   getMeal(req, res) {
     const id = parseInt(req.params.id, 10);
 
@@ -35,7 +34,7 @@ class MealController {
     });
   }
 
-  // Post Meals
+  // Add a meal option
   createMeal(req, res) {
     if (!req.body.name) {
       return res.status(400).send({
@@ -45,7 +44,7 @@ class MealController {
     }
     if (!req.body.size) {
       return res.status(400).send({
-        success: 'false',
+        status: 'false',
         message: 'size of food is required',
       });
     }
@@ -60,7 +59,7 @@ class MealController {
       name: req.body.name,
       size: req.body.size,
       price: req.body.price,
-    };
+    }
     Meals.push(newMeal);
     return res.status(201).send({
       status: 'true',
@@ -69,22 +68,21 @@ class MealController {
     });
   }
 
-  // Updating a meal (put meal)
+  // Update the information of a mealoption
   updateMeal(req, res) {
     const id = parseInt(req.params.id, 10);
 
-    let foundMeal;
+    let mealFound;
     let itemIndex;
 
     Meals.map((meal, index) => {
       if (meal.id === id) {
-        foundMeal = meal;
+        mealFound = meal;
         itemIndex = index;
       }
     });
-
     // handing errors
-    if (!foundMeal) {
+    if (!mealFound) {
       return res.status(404).send({
         status: 'false',
         message: 'Meal not found',
@@ -99,7 +97,7 @@ class MealController {
     if (!req.body.size) {
       return res.status(400).send({
         status: 'false',
-        message: 'name is required',
+        message: 'size is required',
       });
     }
     if (!req.body.price) {
@@ -110,11 +108,12 @@ class MealController {
     }
 
     const updatedMeal = {
-      id: foundMeal.id,
-      name: req.body.name || foundMeal.name,
-      size: req.body.size || foundMeal.size,
-      price: req.body.price || foundMeal.price,
+      id: mealFound.id,
+      name: req.body.name || mealFound.name,
+      size: req.body.size || mealFound.size,
+      price: req.body.price || mealFound.price,
     };
+
     Meals.splice(itemIndex, 1, updatedMeal);
 
     return res.status(201).send({
@@ -124,7 +123,7 @@ class MealController {
     });
   }
 
-  // Deleting a meal
+  // Remove a meal option
   deleteMeal(req, res) {
     const id = parseInt(req.params.id, 10);
 
@@ -153,4 +152,6 @@ class MealController {
   }
 }
 
-export default MealController;
+const mealController = new MealController();
+
+export default mealController;
