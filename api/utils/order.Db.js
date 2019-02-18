@@ -1,23 +1,20 @@
 const orders = [
   {
     id: 1,
-    userId: 2,
-    mealId: 2,
-    quantity: 1,
+    meal: 'Rice and Stew',
+    quantity: 3,
     delivery_address: 'Ikorodu',
   },
   {
     id: 2,
-    userId: 2,
-    mealId: 1,
+    meal: 'Eba and Eguisi',
     quantity: 1,
     delivery_address: 'Ikeja',
   },
   {
-    id: 1,
-    userId: 2,
-    mealId: 3,
-    quantity: 1,
+    id: 2,
+    meal: 'Tea and coffee',
+    quantity: 4,
     delivery_address: 'Ojuta',
   },
 ];
