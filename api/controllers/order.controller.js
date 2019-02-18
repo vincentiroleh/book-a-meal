@@ -29,7 +29,7 @@ class OrderController {
     Order.push(newOrder);
     return res.status(201).send({
       success: 'true',
-      message: 'Order is on the way to you doorpost',
+      message: 'Order placed successfully',
       newOrder,
     });
   }
@@ -78,7 +78,7 @@ class OrderController {
 
         success: 'false',
 
-        message: 'Delivery Address is required',
+        message: 'delivery_address is required',
       });
     }
 
@@ -104,7 +104,7 @@ class OrderController {
 
   // Get orders (Get all the orders)
   getAllOrders(req, res) {
-    const Orders = new Order();
+    const Orders = Order;
     return res.status(200).send({
       status: 'true',
       message: 'Orders retrieved successfully',

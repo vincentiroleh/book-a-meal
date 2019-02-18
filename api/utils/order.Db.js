@@ -12,7 +12,7 @@ const orders = [
     delivery_address: 'Ikeja',
   },
   {
-    id: 2,
+    id: 3,
     meal: 'Tea and coffee',
     quantity: 4,
     delivery_address: 'Ojuta',
