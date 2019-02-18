@@ -2,34 +2,179 @@
 
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
-##### UI Template Demo: [UI Template](https://vincentiroleh.github.io/book-a-meal/UI/)
+## Table of Contents
 
-##### Trello Board Stories
+* [Technologies](#technologies)
+* [Features Implemented](#features-implemented)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+  * [Testing](#testing)
+* [Limitations](#limitations)
+* [Contributing Guide](#contributing-guide)
+* [Author](#Author)
 
-[View](https://trello.com/b/I7gCAIMu)
+### Trello Board Stories
+Project is currently being built with the Project Management Tool, Trello.
+You can find the template
+[HERE](https://trello.com/b/I7gCAIMu)
 
-## Required Features
+### Template
+Template is hosted at [LINK](https://vincentiroleh.github.io/book-a-meal/UI/)
 
-- Users can create an account and log in
-- Admin (Caterer) should be able to manage (i.e: add, modify and delete) meal options in the application.
-- Admin (Caterer) should be able to setup menu for a specific day by selecting from the meal options available on the system
-- Authenticated users (customers) should be able to see the menu for a specific day and select an option out of the menu.
-- Authenticated users (customers) should be able to change their meal choice.
-- Admin (Caterer) should be able to see the orders made by the user
-- Admin should be able to see amount of money made by end of day
+### API Deployment
 
-## Extra Features
+API is deployment still in backlog
 
-1. Authenticated users (customers) should be able to see their order history
-2. Authenticated users (customers) should be able to get notifications when the menu for the day has been set.
-3. Admin (Caterer) should be able to see order history
-4. The application should be able to host more than one caterer.
+### Documentation
+
+Documentation page still in backlog
 
 ## Technologies
+* HTML
+* CSS
+* JavaScript
+* [NodeJS](https://nodejs.org/) - Runtime Environment
+* [ExpressJs](https://expressjs.com/) - Web Application Framework
 
-- HTML5
-- CSS3
-- JavaScript
+
+### Supporting Packages
+
+#### Linter
+
+* [ESLint](https://eslint.org/) - Linter Tool
+
+#### Compiler
+
+* [Babel](https://eslint.org/) - Compiler for Next Generation JavaScript
+
+
+## Features Implemented
+
+### Users (Caterers and Customers)
+
+* Users should be able to signin and signup on the app as either a caterer or a customer
+
+### Caterers
+
+* Caterers should be able to create meals
+* Caterers should be able to modify meas
+* Caterers should be able to delete meals
+* Caterers should be able to setup menu for a particular day
+* Caterers should be able to modify menu for a particular day
+* Caterers should be able to get a particular order
+* Caterers should be able to mark a pending order as delivered
+* Caterers should be able to get all their orders on the platform
+* Caterers should be able to get all their orders for a specific day
+* Caterers should be able to get notifications when their meals are ordered
+
+### Customers
+
+* Customers should be able to make an order
+* Customers should be able to modify or cancel an order within 100 seconds of creating it
+* Customers should be able to get the menu for the day
+* Customers should be able to get a particular order
+* Customers should be able to get all their orders on the platform
+* Customers should be able to get all their orders for a specific day
+
+## Getting Started
+
+### Installation
+
+* Install [NodeJS](https://nodejs.org/) and [PostgreSQL](https://www.postgresql.org/) on your computer
+* Clone this repository using `git clone https://github.com/vincentiroleh/book-a-meal`
+* Run `npm install` to install all dependencies
+* Run `npm start` to start the server
+* Navigate to [localhost:3000](http://localhost:3000/) in browser to access the application
+
+### Testing
+
+#### Prerequisites
+
+* [Postman](https://getpostman.com/) - API Toolchain
+
+#### Testing with Postman
+
+* After installing as shown above
+* Navigate to [localhost:3000](http://localhost:3000/) in
+  [Postman](https://getpostman.com/) to access the application
+
+### MEAL
+
+```
+ {
+   id:   int,
+   name: 'String',
+   size: 'String',
+   price: 'Int',
+ }
+```
+
+##### Testing: Get all the meal options
+* GET: http://localhost:3000/api/v1/meals
+
+##### Testing: Add a meal option
+* POST: http://localhost:3000/api/v1/meals
+
+##### Testing: Update the information of a meal option
+* PUT: http://localhost:3000/api/v1/meals/id
+
+##### Testing: Remove a meal option
+* DEL: http://localhost:3000/api/v1/meals/id
+
+
+### MENU
+
+```
+ {
+   id:   int,
+   title: 'String',
+   date: 'Data',
+   list: '[]',
+ }
+
+```
+
+##### Testing: Setup the menu for the day
+* POST: http://localhost:3000/api/v1/menu
+
+##### Testing: Get the menu for the day
+* GET: http://localhost:3000/api/v1/menu
+
+
+### ORDER
+
+```
+ {
+   id:   int,
+   meal: 'String',
+   quantity: 'int',
+   delivery_address: 'string',
+ }
+
+```
+
+##### Testing: Select the meal option from the menu
+* POST: http://localhost:3000/api/v1/order
+
+##### Testing: Modify an order
+* PUT: http://localhost:3000/api/v1/order/id
+
+##### Testing: Get all the orders
+* GET: http://localhost:3000/api/v1/order
+
+
+## Limitations
+
+- Test not implemented yet
+- No hosted online Documentation yet
+- API yet to be hosted on heroku
+
+
+## Contributing Guide
+
+- Fork the repository
+- Make your contributions
+- Create a pull request against the master branch
 
 ## Author
 
