@@ -80,7 +80,7 @@ Documentation page still in backlog
 
 ### Installation
 
-* Install [NodeJS](https://nodejs.org/) and [PostgreSQL](https://www.postgresql.org/) on your computer
+* Install [NodeJS](https://nodejs.org/) on your computer
 * Clone this repository using `git clone https://github.com/vincentiroleh/book-a-meal`
 * Run `npm install` to install all dependencies
 * Run `npm start` to start the server
