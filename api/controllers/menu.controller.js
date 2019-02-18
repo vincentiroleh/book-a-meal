@@ -29,7 +29,7 @@ class MenuController {
     Menu.push(newMenu);
     return res.status(201).send({
       success: 'true',
-      message: 'meals added successfully',
+      message: 'Menu added successfully',
       newMenu,
     });
   }
@@ -37,7 +37,7 @@ class MenuController {
   getMenu(req, res) {
     return res.status(200).send({
       success: 'true',
-      message: 'Menu of the day set successfully',
+      message: 'Menu of the day retrieved successfully',
       Menu,
     });
   }

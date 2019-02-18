@@ -3,6 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mealRouter from './routes/meal.route';
 import menuRouter from './routes/menu.route';
+import orderRouter from './routes/order.route';
 
 // setup express
 const app = express();
@@ -18,6 +19,7 @@ app.get('/', (req, res) => res.send('The API is working'));
 // handle
 app.use('/api/v1/meals', mealRouter);
 app.use('/api/v1/menu', menuRouter);
+app.use('/api/v1/orders', orderRouter);
 
 
 // Port and server configuration
