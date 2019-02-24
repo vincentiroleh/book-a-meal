@@ -4,8 +4,8 @@
   "description": "a meal booking api",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node --presets babel-preset-env ./index.js",
+    "test": "mocha --require babel-register tests/*.js --exit"
   },
   "repository": {
     "type": "git",
@@ -32,9 +32,12 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.1",
     "nodemon": "^1.18.10"
   }
 }
