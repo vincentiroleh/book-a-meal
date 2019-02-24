@@ -17,7 +17,7 @@ describe('App Entry Points', () => {
       .end((err, res) => {
         res.should.have.status(200);
         res.body.should.be.a('object');
-        expect(res.text).to.be.eql('The API is working');
+        expect(res.text).to.be.eql('Welcome to Meal Booking API');
         done();
       });
   });

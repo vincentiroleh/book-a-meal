@@ -2,7 +2,6 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable class-methods-use-this */
 import Meals from '../utils/mealDb';
-import mealModel from '../models/meal.model';
 
 class MealController {
   // Get all the meal options
@@ -59,7 +58,7 @@ class MealController {
       name: req.body.name,
       size: req.body.size,
       price: req.body.price,
-    }
+    };
     Meals.push(newMeal);
     return res.status(201).send({
       status: 'true',
@@ -68,7 +67,7 @@ class MealController {
     });
   }
 
-  // Update the information of a mealoption
+  // Update the information of a meal option
   updateMeal(req, res) {
     const id = parseInt(req.params.id, 10);
 
