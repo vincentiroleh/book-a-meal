@@ -6,17 +6,17 @@ class OrderController {
   createOrder(req, res) {
     if (!req.body.meal) {
       return res.status(400).send({
-        success: 'false',
+        status: 'false',
         message: 'meal required',
       });
     } if (!req.body.quantity) {
       return res.status(400).send({
-        success: 'false',
+        status: 'false',
         message: 'quantity of food is required',
       });
     } if (!req.body.delivery_address) {
       return res.status(400).send({
-        success: 'false',
+        status: 'false',
         message: 'Delivery address is required',
       });
     }
@@ -28,7 +28,7 @@ class OrderController {
     };
     Order.push(newOrder);
     return res.status(201).send({
-      success: 'true',
+      status: 'true',
       message: 'Order placed successfully',
       newOrder,
     });
@@ -52,7 +52,7 @@ class OrderController {
     if (!foundOrder) {
       return res.status(404).send({
 
-        success: 'false',
+        status: 'false',
 
         message: 'Order not found',
       });
@@ -61,14 +61,14 @@ class OrderController {
     if (!req.body.meal) {
       return res.status(400).send({
 
-        success: 'false',
+        status: 'false',
 
         message: 'meal is required',
       });
     } if (!req.body.quantity) {
       return res.status(400).send({
 
-        success: 'false',
+        status: 'false',
 
         message: 'quantity of order is required',
 
@@ -76,7 +76,7 @@ class OrderController {
     } if (!req.body.delivery_address) {
       return res.status(400).send({
 
-        success: 'false',
+        status: 'false',
 
         message: 'delivery_address is required',
       });
@@ -96,7 +96,7 @@ class OrderController {
     Order.splice(itemIndex, 1, updatedOrder);
 
     return res.status(201).send({
-      success: 'true',
+      status: 'true',
       message: 'Order updated successfully',
       updatedOrder,
     });
