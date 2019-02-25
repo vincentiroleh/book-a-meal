@@ -7,9 +7,7 @@
     "start": "node ./build/index.js",
     "build": "babel -d ./build ./api -s",
     "dev": "nodemon --exec babel-node ./api/index.js",
-    "test": "mocha --require @babel/register --exit",
-    "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+    "test": "mocha --require @babel/register --exit"
   },
   "repository": {
     "type": "git",
