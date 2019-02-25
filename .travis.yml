@@ -1,29 +1,21 @@
 language: node_js
 
 node_js:
-  - "stable"
-
-env:
-  global: a4eff32b23374f7eed16b40a4f8e5d78a6f7c0434908d594181a80b8c3310680
-install:
-  - npm install
-
-cache:
-  directories:
-    - "node_modules"
-
+  - 8.10.0
+dist: trusty
+addons:
+  chrome: stable
 before_script:
-    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-    - chmod +x ./cc-test-reporter
-    - ./cc-test-reporter before-build
+  - yarn global add nyc
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build --debug
 
 script:
-  - npm test
-  - npm run coveralls
+  - nyc --reporter=lcov yarn run unit
 
-after_success:
-    - npm run coverage
-    - npm install codeclimate-test-reporter
-    - codeclimate-test-reporter < coverage/lcov.info
 after_script:
-- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+notifications:
+email: false
