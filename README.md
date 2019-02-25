@@ -1,20 +1,23 @@
-# BOOK A MEAL
+# [BOOK A MEAL](https://api-meal-booking.herokuapp.com)
 
 [![Build Status](https://travis-ci.org/vincentiroleh/book-a-meal.svg?branch=develop)](https://travis-ci.org/vincentiroleh/book-a-meal)
 [![Coverage Status](https://coveralls.io/repos/github/vincentiroleh/book-a-meal/badge.svg?branch=develop)](https://coveralls.io/github/vincentiroleh/book-a-meal?branch=develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/33efd30a03c572f30426/maintainability)](https://codeclimate.com/github/vincentiroleh/book-a-meal/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/33efd30a03c572f30426/test_coverage)](https://codeclimate.com/github/vincentiroleh/book-a-meal/test_coverage)
 
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
 ## Table of Contents
 
-- [Technologies](#technologies)
-- [Features Implemented](#features-implemented)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Testing](#testing)
-- [Limitations](#limitations)
-- [Contributing Guide](#contributing-guide)
-- [Author](#Author)
+* [Technologies](#technologies)
+* [Features Implemented](#features-implemented)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+  * [Development](#development)
+  * [Testing](#testing)
+* [Limitations](#limitations)
+* [Contributing Guide](#contributing-guide)
+* [Author](#Author)
 
 ### Trello Board Stories
 
@@ -28,7 +31,7 @@ Template is hosted at [LINK](https://vincentiroleh.github.io/book-a-meal/UI/)
 
 ### API Deployment
 
-API is deployment still in backlog
+API is deployed at [https://api-meal-booking.herokuapp.com](https://api-meal-booking.herokuapp.com)
 
 ### Documentation
 
@@ -51,6 +54,11 @@ Documentation page still in backlog
 #### Compiler
 
 - [Babel](https://eslint.org/) - Compiler for Next Generation JavaScript
+
+#### Test Tools
+
+* [Mocha](https://mochajs.org/) - JavaScript Test Framework for API Tests (Backend)
+* [Chai](http://chaijs.com/) - TDD/BDD Assertion Library for Node
 
 ## Features Implemented
 
@@ -84,11 +92,18 @@ Documentation page still in backlog
 
 ### Installation
 
-- Install [NodeJS](https://nodejs.org/) on your computer
-- Clone this repository using `git clone https://github.com/vincentiroleh/book-a-meal`
-- Run `npm install` to install all dependencies
-- Run `npm start` to start the server
-- Navigate to [localhost:3000](http://localhost:3000/) in browser to access the application
+* Install [NodeJS](https://nodejs.org/) on your computer
+* Clone this repository using `git clone https://github.com/vincentiroleh/book-a-meal`
+* Run `npm install` to install all dependencies
+* Run `npm run build` to build the project
+* Run `npm start` to start the server
+* Navigate to [localhost:3000](http://localhost:3000/) in browser to access the application
+
+### Development
+
+You can run `npm run dev` in development to use [Nodemon](https://nodemon.io/)
+
+[Nodemon](https://nodemon.io/) watches for file changes and restarts your server.
 
 ### Testing
 
@@ -175,9 +190,8 @@ Documentation page still in backlog
 
 ## Limitations
 
-- Test not implemented yet
-- No hosted online Documentation yet
-- API yet to be hosted on heroku
+- Application still in progress
+- Online Documentation yet to be implement
 
 ## Contributing Guide
 
