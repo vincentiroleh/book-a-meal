@@ -164,8 +164,6 @@ describe('MEALS', () => {
     });
   });
 
-
-
   // Modifying a meal option
   describe('PUT /api/v1/meals/:id', () => {
     it('it should return error message when wrong id is called for modification', (done) => {
