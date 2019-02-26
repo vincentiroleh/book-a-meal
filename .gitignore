@@ -1,6 +1,5 @@
 /node_modules
-.vscode
+.nyc_output
+lcov.info
 .coveralls.yml
-npm-debug.log
-.DS_Store
-/.env
+.env
