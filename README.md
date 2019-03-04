@@ -9,15 +9,15 @@ Book-A-Meal is an application that allows customers to make food orders and help
 
 ## Table of Contents
 
-* [Technologies](#technologies)
-* [Features Implemented](#features-implemented)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
-  * [Development](#development)
-  * [Testing](#testing)
-* [Limitations](#limitations)
-* [Contributing Guide](#contributing-guide)
-* [Author](#Author)
+- [Technologies](#technologies)
+- [Features Implemented](#features-implemented)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Testing](#testing)
+- [Limitations](#limitations)
+- [Contributing Guide](#contributing-guide)
+- [Author](#Author)
 
 ### Trello Board Stories
 
@@ -57,8 +57,8 @@ Documentation page still in backlog
 
 #### Test Tools
 
-* [Mocha](https://mochajs.org/) - JavaScript Test Framework for API Tests (Backend)
-* [Chai](http://chaijs.com/) - TDD/BDD Assertion Library for Node
+- [Mocha](https://mochajs.org/) - JavaScript Test Framework for API Tests (Backend)
+- [Chai](http://chaijs.com/) - TDD/BDD Assertion Library for Node
 
 ## Features Implemented
 
@@ -92,12 +92,12 @@ Documentation page still in backlog
 
 ### Installation
 
-* Install [NodeJS](https://nodejs.org/) on your computer
-* Clone this repository using `git clone https://github.com/vincentiroleh/book-a-meal`
-* Run `npm install` to install all dependencies
-* Run `npm run build` to build the project
-* Run `npm start` to start the server
-* Navigate to [localhost:3000](http://localhost:3000/) in browser to access the application
+- Install [NodeJS](https://nodejs.org/) on your computer
+- Clone this repository using `git clone https://github.com/vincentiroleh/book-a-meal`
+- Run `npm install` to install all dependencies
+- Run `npm run build` to build the project
+- Run `npm start` to start the server
+- Navigate to [localhost:3000](http://localhost:3000/) in browser to access the application
 
 ### Development
 
@@ -197,7 +197,7 @@ You can run `npm run dev` in development to use [Nodemon](https://nodemon.io/)
 
 - Fork the repository
 - Make your contributions
-- Create a pull request against the master branch
+- Create a pull request against the develop branch
 
 ## Author
 
