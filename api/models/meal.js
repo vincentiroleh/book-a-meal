@@ -38,8 +38,12 @@ export default (sequelize, DataTypes) => {
       }
     }
   }, {});
-  Meal.associate = function(models) {
+  Meal.associate = (models) => {
     // associations can be defined here
+    Meal.belongsTo(models.User, {
+      foreignkey: 'userId',
+      onDelete: 'CASCADE'
+    });
   };
-  return Meal;
+  return User;
 };
