@@ -5,30 +5,30 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: {
         args: false,
-        msg: 'Please enter your name'
+        msg: 'Please enter your name',
       }
-    },    
-    username:{
+    },
+    username: {
       type: DataTypes.STRING,
       allowNull: {
         args: false,
-        msg: 'Please enter your username'
+        msg: 'Please enter your username',
       }
     },
     email: {
       type: DataTypes.STRING,
       allowNull: {
         args: false,
-        msg: 'Please enter your email address'
+        msg: 'Please enter your email address',
       },
       unique: {
         args: true,
-        msg: 'Email already exists'
+        msg: 'Email already exists',
       },
       validate: {
         isEmail: {
           args: true,
-          msg: 'Please enter a valid email address'
+          msg: 'Please enter a valid email address',
         },
       },
     },
@@ -36,7 +36,7 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: {
         args: false,
-        msg: 'Please enter a password'
+        msg: 'Please enter a password',
       },
       validate: {
         isNotShort: (value) => {
@@ -47,8 +47,12 @@ export default (sequelize, DataTypes) => {
       },
     }
   }, {});
-  User.associate = function(models) {
+  User.associate = (models) => {
     // associations can be defined here
+    User.hasMany(models.Meal, {
+      foreignkey: 'userId',
+    });
   };
+  
   return User;
 };
