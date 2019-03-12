@@ -4,7 +4,6 @@ import bodyParser from 'body-parser';
 import mealRouter from './routes/meal.route';
 import menuRouter from './routes/menu.route';
 import orderRouter from './routes/order.route';
-import routes from './routes/index';
 
 // setup express
 const app = express();
@@ -18,7 +17,6 @@ app.use(bodyParser.urlencoded({
 app.get('/', (req, res) => res.send('Welcome to Meal Booking API'));
 
 // handle
-routes(app);
 app.use('/api/v1/meals', mealRouter);
 app.use('/api/v1/menu', menuRouter);
 app.use('/api/v1/orders', orderRouter);
