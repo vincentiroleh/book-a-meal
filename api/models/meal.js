@@ -1,48 +1,35 @@
-export default (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   const Meal = sequelize.define('Meal', {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: {
-        args: false,
-        msg: 'Please enter the title for your meal',
-      },
+  	id: {
+      allowNull: false,
+      primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4
     },
-    price: {
-      type: DataTypes.INTEGER,
-      allowNull: {
-        args: false,
-        msg: 'Please enter the amount for the meal',
-      },
+    name: {
+    	type: DataTypes.STRING,
+    	allowNull: false,
+    	validate: {
+    		len: {
+    			args: [3, 50],
+    			msg: 'Your meal name must be between 3 and 50 characters. Please try again.'
+    		}
+    	}
     },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: {
-        args: false,
-        msg: 'Please enter description for the meal',
-      },
-    },
-    quantity: {
-      type: DataTypes.INTEGER,
-      allowNull: {
-        args: false,
-        msg: 'Please input a quantity in stock for the meal',
-      },
-    },
-    userId: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'User',
-        key: 'id',
-        as: 'userId',
-      },
-    },
+    description: DataTypes.STRING,
+    quantity: DataTypes.INTEGER,
+    price: DataTypes.INTEGER
   }, {});
   Meal.associate = (models) => {
     // associations can be defined here
-    Meal.belongsTo(models.User, {
-      foreignkey: 'userId',
-      onDelete: 'CASCADE',
+    Meal.hasMany(models.Menu, {
+      foreignKey: 'MealId',
+      onDelete: 'CASCADE'
     });
+    Meal.belongsTo(models.User, {
+      foreignKey: 'UserId',
+      onDelete: 'CASCADE'
+    })
   };
   return Meal;
 };
