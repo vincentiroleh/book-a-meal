@@ -1,10 +1,9 @@
 /* eslint-disable no-console */
 import express from 'express';
 import bodyParser from 'body-parser';
-import mealRouter from './routes/meal.route';
-import menuRouter from './routes/menu.route';
-import orderRouter from './routes/order.route';
-import routes from './routes/index';
+
+import Routers from './routes';
+import config from './config/config';
 
 // setup express
 const app = express();
@@ -15,13 +14,11 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
+// Entry router
 app.get('/', (req, res) => res.send('Welcome to Meal Booking API'));
 
-// handle
-routes(app);
-app.use('/api/v1/meals', mealRouter);
-app.use('/api/v1/menu', menuRouter);
-app.use('/api/v1/orders', orderRouter);
+// ENDPOINT Routers
+app.use(Routers);
 
 // Port and server configuration
 const PORT = process.env.PORT || 3000;
