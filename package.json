@@ -7,6 +7,7 @@
     "start": "node ./build/index.js",
     "build": "babel -d ./build ./api -s",
     "dev": "nodemon --exec babel-node ./api/index.js",
+    "app": "nodemon --exec babel-node ./server/app.js",
     "test": "mocha --require @babel/register --exit || true",
     "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
     "coveralls-coverage": "coveralls < lcov.info",
